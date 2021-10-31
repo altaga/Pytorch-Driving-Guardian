@@ -18,10 +18,20 @@ Monitor completo de el estado de alerta del conductor, estado emocional y monito
     - [Summary:](#summary)
     - [Neural Network:](#neural-network)
     - [Mini Demo:](#mini-demo)
+      - [Jupyter Notebook:](#jupyter-notebook)
+      - [Desktop Demo:](#desktop-demo)
   - [Emotion Detection:](#emotion-detection)
     - [Summary:](#summary-1)
     - [Neural Network:](#neural-network-1)
     - [Mini Demo:](#mini-demo-1)
+      - [Jupyter Notebook:](#jupyter-notebook-1)
+      - [Desktop Demo:](#desktop-demo-1)
+  - [Blind Spot:](#blind-spot)
+    - [Summary:](#summary-2)
+    - [Neural Network:](#neural-network-2)
+    - [Mini Demo:](#mini-demo-2)
+      - [Jupyter Notebook:](#jupyter-notebook-2)
+      - [Desktop Demo:](#desktop-demo-2)
 - [The Final Product:](#the-final-product)
     - [Epic DEMO:](#epic-demo)
 - [Commentary:](#commentary)
@@ -110,6 +120,7 @@ La red neuronal que ocupamos para este problema es una red neuronal convoluciona
 
 Layers:
 
+- Input Layer: Esta layer tiene una entrada de (24,24,1), recibiendo los datos de una imagen de 24 px de alto y 24px de largo en escala de grises.
 - Conv2D: Layer convolucional para la generacion de filtros de las imagenes de entrada.
 - BatchNorm2D: Ayuda a la capa convolucional a normalizar los valores despues de esa capa y ayuda a la red a acelerar su convergencia en el entrenamiento.
   - https://arxiv.org/abs/1502.03167
@@ -121,22 +132,33 @@ Dato Curioso: El uso de Residual Blocks tiene como funcion evitar las perdidas d
 
 ### Mini Demo:
 
+#### Jupyter Notebook:
 
+Si quieres probar la funcion del modelo, he realizado un Jupyter Notebook ya con el codigo listo para funcionar.
+
+Link:
+
+#### Desktop Demo:
+
+Aqui un demo del codigo durante el desarrollo.
+
+VIDEO
 
 ## Emotion Detection:
 
 ### Summary:
 
-The function of this model is to make a detection of distraction or closed eyes of the driver for more than 2 seconds (Drowsiness) or he is distracted from the road (for example, looking at the cell phone).
+The function of this model is to detect the driver's emotions at all times and through musical responses (songs) try to correct the driver's mental state, in order to keep him neutral or in a good mood while driving, thus reducing the risk of accidents.
 
 ### Neural Network:
 
-La red neuronal que ocupamos para este problema es una red neuronal convolucional, sin embargo como parte de optimizar esta red con las increibles herramientas de Pytorch.
+Se utilizo la misma red neuronal que en el caso anterior ya que el problema tambien requiere el uso de una red neuronal convolucional.
 
 <img src="./Images/nnEmotion.png">
 
 Layers:
 
+- Input Layer: Esta layer tiene una entrada de (24,24,1), recibiendo los datos de una imagen de 48 px de alto y 48px de largo en escala de grises.
 - Conv2D: Layer convolucional para la generacion de filtros de las imagenes de entrada.
 - BatchNorm2D: Ayuda a la capa convolucional a normalizar los valores despues de esa capa y ayuda a la red a acelerar su convergencia en el entrenamiento.
   - https://arxiv.org/abs/1502.03167
@@ -144,34 +166,72 @@ Layers:
 - ResidualBlock: Este tipo de bloque mejora el rendimiento de la red haciendo que cada uno aprenda aun mas sobre los datos que buscamos analizar evitando la degradacion del performance al agregar aun mas bloques.
   - https://towardsdatascience.com/residual-network-implementing-resnet-a7da63c7b278
 
-Dato Curioso: El uso de Residual Blocks tiene como funcion evitar las perdidas de una CNN mientras la red crece, un problema similar a las redes RNN para NLP, las cuales tiene como solucion las Redes Neuronales Transformer.
+### Mini Demo:
+
+#### Jupyter Notebook:
+
+Si quieres probar la funcion del modelo, he realizado un Jupyter Notebook ya con el codigo listo para funcionar.
+
+Link:
+
+#### Desktop Demo:
+
+Aqui un demo del codigo durante el desarrollo.
+
+VIDEO
+
+## Blind Spot:
+
+### Summary:
+
+The function of this model is to detect objects that are less than 3 meters from the car at the blind spot.
+
+### Neural Network:
+
+Para detectar multiples objetos en una imagen como lo son personas, autos o animales. Se decidio que lo mas eficente era utilizar una red ya pre-entrenada y con la capacidad de realizar esta tarea de forma eficiente, por lo tanto decidimos utilizar una Darknet, en especifico la YoloV3.
+
+<img src="https://i.stack.imgur.com/js9wN.png">
+
+Layers:
+
+- Input Layer: Esta layer tiene una entrada de (416,416,3), recibiendo los datos de una imagen de 416 px de alto y 416px de largo a color.
+- ConvolutionDownsampling: Esta capa tiene la funcion de realizar un pooling de la imagen y empezar a genera los filtros de la imagen.
+- Dense Connection: Esta capa es una red de neuronas normales conectadas, como cualquier capa densa en una red neuronal.
+- Spatial Pyramid Pooling: Given an 2D input Tensor, Temporal Pyramid Pooling divides the input in x stripes which extend through the height of the image and width of roughly (input_width / x). These stripes are then each pooled with max- or avg-pooling to calculate the output.
+  - https://github.com/revidee/pytorch-pyramid-pooling
+- Object Detection: Esta capa tiene como finalidad terminar de determinar los objetos que estan siendo observados en la imagen.
 
 ### Mini Demo:
 
+#### Jupyter Notebook:
 
+Si quieres probar la funcion del modelo, he realizado un Jupyter Notebook ya con el codigo listo para funcionar.
+
+Link:
+
+#### Desktop Demo:
+
+Aqui un demo del codigo durante el desarrollo.
+
+VIDEO
 
 
 
 # The Final Product:
 
-Product:
-
-<img src="https://i.ibb.co/hK6Y0pM/68747470733a2f2f692e6962622e636f2f674a42346636522f32303230303231302d3231323731342e6a7067.jpg" width="800">
-<img src="https://i.ibb.co/WFKx2DC/68747470733a2f2f692e6962622e636f2f393974436d74382f57686174732d4170702d496d6167652d323032302d30332d31.jpg" width="800">
-
 Product installed inside the car:
 
-<img src="https://i.ibb.co/yQgJGfk/Whats-App-Image-2020-03-16-at-14-03-07-1.jpg" width="800">
-<img src="https://i.ibb.co/hXvWmbf/68747470733a2f2f692e6962622e636f2f364a356a5342352f57686174732d4170702d496d6167652d323032302d30332d31.jpg" width="800"> 
+<img src="./Images/d3.jpg" width="800">
+<img src="./Images/d1.jpg" width="800"> 
 
 Notifications:
 
-<img src="https://i.ibb.co/VNWzJ37/Screenshot-20200210-212306-Messages.jpg" width="600">
+<img src="./Images/message.jpg" width="600">
 
 ### Epic DEMO:
 
 Video: Click on the image
-[![Car](https://i.ibb.co/4mx4LPK/Logo.png)](https://youtu.be/rNhcBHKiGik)
+[![Car](./Images/logo.png)](pending)
 
 Sorry github does not allow embed videos.
 
