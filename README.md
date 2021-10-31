@@ -18,20 +18,21 @@ Monitor completo de el estado de alerta del conductor, estado emocional y monito
     - [Summary:](#summary)
     - [Neural Network:](#neural-network)
     - [Mini Demo:](#mini-demo)
-      - [Jupyter Notebook:](#jupyter-notebook)
-      - [Desktop Demo:](#desktop-demo)
+      - [**Jupyter Notebook**:](#jupyter-notebook)
+      - [**Demo Drowsiness**:](#demo-drowsiness)
+      - [**Demo Alert**:](#demo-alert)
   - [Emotion Detection:](#emotion-detection)
     - [Summary:](#summary-1)
     - [Neural Network:](#neural-network-1)
     - [Mini Demo:](#mini-demo-1)
-      - [Jupyter Notebook:](#jupyter-notebook-1)
-      - [Desktop Demo:](#desktop-demo-1)
+      - [**Jupyter Notebook**:](#jupyter-notebook-1)
+      - [**Demo**:](#demo)
   - [Blind Spot:](#blind-spot)
     - [Summary:](#summary-2)
     - [Neural Network:](#neural-network-2)
     - [Mini Demo:](#mini-demo-2)
-      - [Jupyter Notebook:](#jupyter-notebook-2)
-      - [Desktop Demo:](#desktop-demo-2)
+      - [**Jupyter Notebook**:](#jupyter-notebook-2)
+      - [**Demo**:](#demo-1)
 - [The Final Product:](#the-final-product)
     - [Epic DEMO:](#epic-demo)
 - [Commentary:](#commentary)
@@ -132,15 +133,21 @@ Dato Curioso: El uso de Residual Blocks tiene como funcion evitar las perdidas d
 
 ### Mini Demo:
 
-#### Jupyter Notebook:
+#### **Jupyter Notebook**:
 
 Si quieres probar la funcion del modelo, he realizado un Jupyter Notebook ya con el codigo listo para funcionar.
 
 Link:
 
-#### Desktop Demo:
+#### **Demo Drowsiness**:
 
 Aqui un demo del codigo durante el desarrollo.
+
+VIDEO
+
+#### **Demo Alert**:
+
+Demo de como llega la alerta al celular tras choque.
 
 VIDEO
 
@@ -168,13 +175,13 @@ Layers:
 
 ### Mini Demo:
 
-#### Jupyter Notebook:
+#### **Jupyter Notebook**:
 
 Si quieres probar la funcion del modelo, he realizado un Jupyter Notebook ya con el codigo listo para funcionar.
 
 Link:
 
-#### Desktop Demo:
+#### **Demo**:
 
 Aqui un demo del codigo durante el desarrollo.
 
@@ -203,13 +210,13 @@ Layers:
 
 ### Mini Demo:
 
-#### Jupyter Notebook:
+#### **Jupyter Notebook**:
 
 Si quieres probar la funcion del modelo, he realizado un Jupyter Notebook ya con el codigo listo para funcionar.
 
 Link:
 
-#### Desktop Demo:
+#### **Demo**:
 
 Aqui un demo del codigo durante el desarrollo.
 
