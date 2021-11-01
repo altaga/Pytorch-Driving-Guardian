@@ -137,19 +137,19 @@ Dato Curioso: El uso de Residual Blocks tiene como funcion evitar las perdidas d
 
 Si quieres probar la funcion del modelo, he realizado un Jupyter Notebook ya con el codigo listo para funcionar.
 
-Link:
+Link: PENDING
 
 #### **Demo Drowsiness**:
 
-Aqui un demo del codigo durante el desarrollo.
-
-VIDEO
+Video: Click on the image
+[![Car](./Images/logo.png)](https://youtu.be/Ttvc87rZZBw)
+Sorry github does not allow embed videos.
 
 #### **Demo Alert**:
 
-Demo de como llega la alerta al celular tras choque.
-
-VIDEO
+Video: Click on the image
+[![Car](./Images/logo.png)](https://youtu.be/TtqtQ1KRBL4)
+Sorry github does not allow embed videos.
 
 ## Emotion Detection:
 
@@ -179,13 +179,13 @@ Layers:
 
 Si quieres probar la funcion del modelo, he realizado un Jupyter Notebook ya con el codigo listo para funcionar.
 
-Link:
+Link: PENDING
 
 #### **Demo**:
 
-Aqui un demo del codigo durante el desarrollo.
-
-VIDEO
+Video: Click on the image
+[![Car](./Images/logo.png)](https://youtu.be/v5uMu-6p1Tw)
+Sorry github does not allow embed videos.
 
 ## Blind Spot:
 
@@ -214,15 +214,13 @@ Layers:
 
 Si quieres probar la funcion del modelo, he realizado un Jupyter Notebook ya con el codigo listo para funcionar.
 
-Link:
+Link: PENDING
 
 #### **Demo**:
 
-Aqui un demo del codigo durante el desarrollo.
-
-VIDEO
-
-
+Video: Click on the image
+[![Car](./Images/logo.png)](https://youtu.be/yygXL4Zh7i4)
+Sorry github does not allow embed videos.
 
 # The Final Product:
 
@@ -239,7 +237,6 @@ Notifications:
 
 Video: Click on the image
 [![Car](./Images/logo.png)](pending)
-
 Sorry github does not allow embed videos.
 
 # Commentary:
