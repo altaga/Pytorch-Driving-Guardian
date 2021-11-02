@@ -34,7 +34,7 @@ Monitor completo de el estado de alerta del conductor, estado emocional y monito
       - [**Jupyter Notebook**:](#jupyter-notebook-2)
       - [**Demo**:](#demo-1)
 - [The Final Product:](#the-final-product)
-    - [Epic DEMO:](#epic-demo)
+    - [DEMO:](#demo)
 - [Commentary:](#commentary)
   - [References:](#references)
 
@@ -188,7 +188,7 @@ Link: PENDING
 #### **Demo**:
 
 Video: Click on the image
-[![Car](./Images/logo.png)](https://youtu.be/v5uMu-6p1Tw)
+[![Car](./Images/logo.png)](https://www.youtube.com/watch?v=-vTpf9aUerA)
 Sorry github does not allow embed videos.
 
 ## Blind Spot:
