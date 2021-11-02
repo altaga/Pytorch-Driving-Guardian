@@ -1,20 +1,18 @@
 # Laptop Test:
 
-To test the code on a computer, you should have previously followed the instructions at https://github.com/altaga/DBSE-monitor#laptop-test.
+To test the model you can enter our Jupyter Notebook in Google Colab and everything is ready to run the notebook.
 
-Open the Notebook.ipynb file in a jupyter notebook or the notebook.py file in any IDE that supports python.
-
-NOTE: It is highly recommended to use jupyter notebook to run this code due to its ease of use.
+Link: 
 
 ## Model Creation:
 
-Inside the "https://github.com/altaga/DBSE-monitor/tree/master/Drowsiness/Model" folder our model called "BlinkModel.t7" already exists, which is the one I use for all tests.
+Inside the [Model](./model) folder our model called "BlinkModel.t7" already exists, which is the one I use for all tests.
 
-However the model can be trained by yourself with the code called "train.py" in the folder "https://github.com/altaga/DBSE-monitor/tree/master/Drowsiness/train".
+However the model can be trained by yourself with the code called [train.py](./train/train.py) in the folder [Train](./train).
 
 The database that was used, is a database with 4846 images of left and right eyes, open and closed, where approximately half are open and closed so that the network was able to identify the state of the eyes, the database is in the following folder, it is a **.zip** file unzip before starting the training:
 
-https://github.com/altaga/DBSE-monitor/blob/master/Drowsiness/train/dataset/dataset_B_Eye_Images.zip
+[Database](./train/dataset/dataset_B_Eye_Images.zip)
 
 The training has the following parameters as input.
 
@@ -32,31 +30,6 @@ Example how i train the model with VS code.
 <img src="https://i.ibb.co/c1rBQvQ/image.png" width="1000">
 
 # How does it work:
-
-Let's go through a revision of the algorithms and procedures of both CV systems (Drowsiness and alert on one side and Blind spot detection on the other). The installation is remarkably easy as I have already provided an image for the project.
-
-ALL the code is well explained in "Notebook.ipynb" file.
-
-Please take a look at it for extensive explanation and documentation.
-
-The sleep monitor uses the following libraries:
-
-- OpenCV:
-- Image processing. 
-    - (OpenCV) Haarcascades implementation. 
-    - (OpenCV) Blink eye speed detection.
-    - (Pytorch) Eye Status (Open / Close)
-- VLC: 
-    - Player sound alert.
-
-Only in Jetson Nano:
-
-- Smbus:
-    - Accelerometer reading.
-- Twilio:
-    - Emergency notification delivery.
-- Requests:
-    - Geolocation
 
 The flicker detection algorithm is as follows:
 
@@ -83,7 +56,3 @@ The flicker detection algorithm is as follows:
 
 <img src="https://i.ibb.co/mHZ4VdX/Cel.png" width="600">
 <img src="https://i.ibb.co/3k512YS/cel2.png" width="600">
-
-Whether it's because of the pytorch convolutional network model or the Haarcascades, the monitor will not allow you to take your eyes off the road, as it is extremely dangerous to do that while driving.
-
-<img src="https://i.ibb.co/D84YbYb/Whats-App-Image-2020-03-16-at-12-35-40.jpg" width="600">

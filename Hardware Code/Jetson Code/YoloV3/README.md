@@ -1,14 +1,8 @@
 # Laptop Test:
 
-To test the code on a computer, you should have previously followed the instructions at https://github.com/altaga/DBSE-monitor#laptop-test.
+To test the model you can enter our Jupyter Notebook in Google Colab and everything is ready to run the notebook.
 
-You must download the model from the link below and put it inside the weights folder for the code to work
-
-https://pjreddie.com/media/files/yolov3.weights
-
-Open the Notebook.ipynb file in a jupyter notebook or the notebook.py file in any IDE that supports python.
-
-NOTE: It is highly recommended to use jupyter notebook to run this code due to its ease of use.
+Link: 
 
 ## Model:
 
@@ -17,18 +11,6 @@ In this case we have used an existing model called YoloV3 used for object detect
 The model creator page: https://pjreddie.com/darknet/yolo/
 
 # How does it work:
-
-The blind Spot monitor uses the following libraries:
-
-- OpenCV:
-    - Image processing
-    - CDNN implementation.
-        - The weights of the CDNN were obtained from YoloV3 and imported by PyTorch.
-
-Only for Jetson Nano:
-
-- MQTT with Mosquitto: 
-    - Communication with the ESP32.
 
 In this algorithm we use the detection of objects using PyTorch, YoloV3 and OpenCV which allows the use of CDNN.
 
@@ -71,8 +53,3 @@ Testing the algorithm with the camera.
 Once having this distance, we will filter all distances that are greater than 2 meters, this being a safe distance to the car at the blind spot.
 
 <img src="https://i.ibb.co/mzNdqVp/Whats-App-Image-2020-03-16-at-13-57-36.jpg" width="600">
-
-In turn, we will determine in which of the 2 blind spots the object is, right or left. Depending on the object and the side, the information will be sent via Mosquitto MQTT to the display. For example a car on the left side:
-
-<img src="https://i.ibb.co/dMcL9gn/20200210-203839.jpg" width="600">
-
