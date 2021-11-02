@@ -113,7 +113,7 @@ Ya todo el device montado en el auto se veria asi.
 
 The function of this model is to make a detection of distraction or closed eyes of the driver for more than 2 seconds (Drowsiness) or he is distracted from the road (for example, looking at the cell phone).
 
-[More Info](./Hardware%20Code/Jetson%20Code/Drowsiness/README.md)
+[More Info](https://github.com/altaga/Pytorch-Driving-Guardian/tree/main/Hardware%20Code/Jetson%20Code/Drowsiness/README.md)
 
 ### Neural Network:
 
@@ -159,7 +159,7 @@ Sorry github does not allow embed videos.
 
 The function of this model is to detect the driver's emotions at all times and through musical responses (songs) try to correct the driver's mental state, in order to keep him neutral or in a good mood while driving, thus reducing the risk of accidents.
 
-[More Info](./Hardware%20Code/Jetson%20Code/Hardware%20Code/Jetson%20Code/Emotion%20detection/README.md)
+[More Info](https://github.com/altaga/Pytorch-Driving-Guardian/tree/main/Hardware%20Code/Jetson%20Code/Emotion%20detection/README.md)
 
 ### Neural Network:
 
@@ -197,7 +197,7 @@ Sorry github does not allow embed videos.
 
 The function of this model is to detect objects that are less than 3 meters from the car at the blind spot.
 
-[More Info](./Hardware%20Code/Jetson%20Code/YoloV3/README.md)
+[More Info](https://github.com/altaga/Pytorch-Driving-Guardian/tree/main/Hardware%20Code/Jetson%20Code/YoloV3/README.md)
 
 ### Neural Network:
 
