@@ -1,1 +1,4 @@
 *.weights
+dataset/*
+__pycache__
+.onnx

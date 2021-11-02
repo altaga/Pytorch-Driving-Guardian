@@ -4,10 +4,10 @@ import cv2
 import numpy as np
 import torch.hub
 import os
-import model
+import utils.model
 from PIL import Image
 from torchvision import transforms
-from visualize.grad_cam import BackPropagation, GradCAM,GuidedBackPropagation
+from utils.grad_cam import BackPropagation, GradCAM,GuidedBackPropagation
 import threading
 import time
 import vlc
@@ -80,7 +80,7 @@ current_dir = os.path.dirname(os.path.realpath(__file__))
 torch.cuda.is_available()
 
 # We loaded the simple face detection model before image processing
-faceCascade = cv2.CascadeClassifier(current_dir+'/visualize/haarcascade_frontalface_default.xml')
+faceCascade = cv2.CascadeClassifier(current_dir+'/haar_models/haarcascade_frontalface_default.xml')
 
 # Input image shape
 shape = (48,48)

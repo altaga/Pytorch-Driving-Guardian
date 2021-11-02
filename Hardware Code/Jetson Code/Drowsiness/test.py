@@ -1,10 +1,10 @@
 import cv2
 import torch.hub
 import os
-import model
+import utils.model
 from PIL import Image
 from torchvision import transforms
-from grad_cam import BackPropagation
+from utils.grad_cam import BackPropagation
 import time 
 import threading
 import vlc
