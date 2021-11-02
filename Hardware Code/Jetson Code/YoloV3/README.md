@@ -43,12 +43,12 @@ In this case for the objects that we are going to detect, we approximate the fol
 
 Here is an example of its operation with the same image.
 
-<img src="https://i.ibb.co/wdf45wq/prockess2.jpg" width="1000">
+<img src="https://i.ibb.co/wdf45wq/prockess2.jpg" width="600">
 
 Testing the algorithm with the camera.
 
-<img src="https://i.ibb.co/d2dzt60/process.jpg" width="1000">
-<img src="https://i.ibb.co/qjTc7rX/process1.jpg" width="1000">
+<img src="https://i.ibb.co/d2dzt60/process.jpg" width="600">
+<img src="https://i.ibb.co/qjTc7rX/process1.jpg" width="600">
 
 Once having this distance, we will filter all distances that are greater than 2 meters, this being a safe distance to the car at the blind spot.
 
