@@ -30,7 +30,7 @@ In this case, since our model creates boxes where it encloses our detected objec
 
 If we combine both terms we get the following equation.
 
-<img src="https://i.ibb.co/8c8dBjB/Code-Cogs-Eqn-1.gif" width="600">
+<img src="https://i.ibb.co/8c8dBjB/Code-Cogs-Eqn-1.gif" width="300">
 
 In this case for the objects that we are going to detect, we approximate the following widths in centimeters.
 
