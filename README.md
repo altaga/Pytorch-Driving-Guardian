@@ -1,6 +1,6 @@
 # Pytorch Driving Guardian
 
-Monitor completo de el estado de alerta del conductor, estado emocional y monitor inteligente del punto ciego del carro.
+Comprehensive monitor of driver alertness, emotional state and intelligent car blind spot checker.
 
 <img src="./Images/logo.png" width="1000">
 
@@ -40,22 +40,18 @@ Monitor completo de el estado de alerta del conductor, estado emocional y monito
 
 # Introduction:
 
-Conducir se ha vuelto una tarea tan cotidiana para el ser humano como comer, lavarse los dientes o caminar, sin embargo esta a su vez ze ha convertido es una tarea que puede consumir una gran parte de nuestro dia a dia, ademas de ser una potencialmente peligrosa si no se siguen ciertas normas de seguridad.
+Driving has become such a daily task for humans in the same level as eating, brushing our teeth or sleeping, however this in turn has become a task that can consume a large part of our day to day, in addition to being a potentially dangerous if certain safety rules are not followed.
 
 <img src="https://i.pinimg.com/originals/e4/26/46/e4264624281d816222229deed61c8e32.gif">
 
 # Problem:
 
-Hay 4 peligros muy reales y presentes a la hora de conducir, los cuales son los siguientes.
+There are four very real and present dangers when driving:
 
-- Estar cansado, somnoliento o distraido.
-  - Peligro: podria provocar un choque por quedarse dormido o distraerse con el celular.
-- Estar en un estado emocional irregular como puede ser enojado o triste.
-  - Esto puede generar una conduccion erratica o peligrosa, desencadenando en un gasto mucho mayor de combustible o incluso provocando un choque.
-- No poder poner atencion al punto ciego del vehiculo.
-  - Que al realizar un cambio de carril o dar una vuelta en alguna calle se provoque un choque o peor aun dañar a una persona.
-- Tener un choque y no poder obtener una ayuda rapida.
-  - Que por cualquiera de las razones anteiores o razones externas choquemos y al chocar no podamos avisar a nuestros familiares o contactos de confianza que hemos chocado y mas aun, donde.
+- Being tired, sleepy or distracted. This could cause a crash by falling asleep or being distracted with the cell phone.
+- Being in an irregular emotional state such as angry or sad. This can generate erratic or dangerous driving, triggering a much higher fuel consumption or even causing a crash.
+- Not being able to pay attention to the blind spot of the vehicle. That when making a lane change or turning on a street a collision is caused or worse, injuring a person.
+- Crashing and not being able to get quick help. That for any of the above reasons or external reasons we collide and when we collide we cannot notify our relatives or trusted contacts that we have collided and even more, where.
 
 ## Current Solutions:
 
@@ -85,15 +81,15 @@ Also, the NHTSA mentions that being angry or in an altered state of mind can lea
 
 # Solution:
 
-Contruimos un prototipo el cual es capaz de realizar estos 3 monitoreos de forma fiable y ademas de facil instalacion en cualquier vehiculo.
+We built a prototype which is capable of performing these 3 monitoring reliably and in addition to being easy to install in any vehicle.
 
 <img src="./Images/logo.png" width="1000">
 
-Este POC usa como computadora principal una Jetson Nano 4gb en modo 5W para mantener un consumo bajo para su uso continuo en un vehiculo. La Jetson Nano es una mini computadora muy parecida a la RaspberryPi, con la diferencia que esta tiene una GPU Dedicada habilitada con CUDA, con el fin de ejecutar sobre la GPU los modelos de AI de Pytorch.
+This PoC uses a Jetson Nano 4gb in 5W mode as the main computer to maintain low consumption for continuous use in a vehicle. The Jetson Nano is a mini computer very similar to the RaspberryPi, with the difference that it has a Dedicated GPU enabled with CUDA, in order to run the Pytorch AI models on the GPU.
 
 <img src="./Images/Jetson.jpg">
 
-Para visualizar los resultados se uso un M5core2, el cual es un dispositivo IoT con una pantalla capaz de mostrar los datos a travez de MQTT.
+To visualize the results, an M5core2 was used, which is an IoT device with a screen capable of displaying the data through MQTT.
 
 <img src="./Images/m5core.jpg">
 
@@ -103,7 +99,7 @@ This is the connection diagram of the system:
 
 <img src="./Images/diagram.jpg" width="1000">
 
-Ya todo el device montado en el auto se veria asi.
+The device mounted in the car would look like this.
 
 <img src="./Images/POC.jpg">
 
@@ -117,27 +113,27 @@ The function of this model is to make a detection of distraction or closed eyes 
 
 ### Neural Network:
 
-La red neuronal que ocupamos para este problema es una red neuronal convolucional, sin embargo como parte de optimizar esta red con las increibles herramientas de Pytorch.
+The neural network that we use for this problem is a convolutional neural network, however as part of optimizing this network with the incredible Pytorch tools.
 
 <img src="./Images/nnDrow.png">
 
 Layers:
 
-- Input Layer: Esta layer tiene una entrada de (24,24,1), recibiendo los datos de una imagen de 24 px de alto y 24px de largo en escala de grises.
-- Conv2D: Layer convolucional para la generacion de filtros de las imagenes de entrada.
-- BatchNorm2D: Ayuda a la capa convolucional a normalizar los valores despues de esa capa y ayuda a la red a acelerar su convergencia en el entrenamiento.
+- Input Layer: This layer has an input of (24, 24, 1), receiving the data from a 24px high and 24px long grayscale image.
+- Conv2D: Convolutional layer for the generation of filters of the input images.
+- BatchNorm2D: It helps the convolutional layer to normalize the values after that layer and it helps the network to accelerate its convergence in training.
   - https://arxiv.org/abs/1502.03167
-- ReLu: con esta capa eliminamos las activaciones negativas despues de cada normalizacion.
-- ResidualBlock: Este tipo de bloque mejora el rendimiento de la red haciendo que cada uno aprenda aun mas sobre los datos que buscamos analizar evitando la degradacion del performance al agregar aun mas bloques.
+- ReLu: with this layer we eliminate negative activations after each normalization.
+- ResidualBlock: This type of block improves the performance of the network by making each one learn even more about the data we are looking to analyze, avoiding performance degradation by adding even more blocks.
   - https://towardsdatascience.com/residual-network-implementing-resnet-a7da63c7b278
 
-Dato Curioso: El uso de Residual Blocks tiene como funcion evitar las perdidas de una CNN mientras la red crece, un problema similar a las redes RNN para NLP, las cuales tiene como solucion las Redes Neuronales Transformer.
+Curious fact: The use of Residual Blocks has the function of avoiding the loss of a CNN while the network grows, a problem similar to the RNN networks for NLP, which has the Neural Networks Transformer as a solution.
 
 ### Mini Demo:
 
 #### **Jupyter Notebook**:
 
-Si quieres probar la funcion del modelo, he realizado un Jupyter Notebook ya con el codigo listo para funcionar.
+If you want to test the function of the model, I have made a Jupyter Notebook with the code ready to go.
 
 Link: PENDING
 
@@ -163,25 +159,26 @@ The function of this model is to detect the driver's emotions at all times and t
 
 ### Neural Network:
 
-Se utilizo la misma red neuronal que en el caso anterior ya que el problema tambien requiere el uso de una red neuronal convolucional.
+The same neural network was used as in the previous case since the problem also requires the use of a convolutional neural network.
 
 <img src="./Images/nnEmotion.png">
 
 Layers:
 
-- Input Layer: Esta layer tiene una entrada de (24,24,1), recibiendo los datos de una imagen de 48 px de alto y 48px de largo en escala de grises.
-- Conv2D: Layer convolucional para la generacion de filtros de las imagenes de entrada.
-- BatchNorm2D: Ayuda a la capa convolucional a normalizar los valores despues de esa capa y ayuda a la red a acelerar su convergencia en el entrenamiento.
+- Input Layer: This layer has an input of (24, 24, 1), receiving the data from a 24px high and 24px long grayscale image.
+- Conv2D: Convolutional layer for the generation of filters of the input images.
+- BatchNorm2D: It helps the convolutional layer to normalize the values after that layer and it helps the network to accelerate its convergence in training.
   - https://arxiv.org/abs/1502.03167
-- ReLu: con esta capa eliminamos las activaciones negativas despues de cada normalizacion.
-- ResidualBlock: Este tipo de bloque mejora el rendimiento de la red haciendo que cada uno aprenda aun mas sobre los datos que buscamos analizar evitando la degradacion del performance al agregar aun mas bloques.
+- ReLu: with this layer we eliminate negative activations after each normalization.
+- ResidualBlock: This type of block improves the performance of the network by making each one learn even more about the data we are looking to analyze, avoiding performance degradation by adding even more blocks.
   - https://towardsdatascience.com/residual-network-implementing-resnet-a7da63c7b278
+
 
 ### Mini Demo:
 
 #### **Jupyter Notebook**:
 
-Si quieres probar la funcion del modelo, he realizado un Jupyter Notebook ya con el codigo listo para funcionar.
+If you want to test the function of the model, I have made a Jupyter Notebook with the code ready to go.
 
 Link: PENDING
 
@@ -201,24 +198,24 @@ The function of this model is to detect objects that are less than 3 meters from
 
 ### Neural Network:
 
-Para detectar multiples objetos en una imagen como lo son personas, autos o animales. Se decidio que lo mas eficente era utilizar una red ya pre-entrenada y con la capacidad de realizar esta tarea de forma eficiente, por lo tanto decidimos utilizar una Darknet, en especifico la YoloV3.
+To detect multiple objects in an image such as people, cars or animals. It was decided that the most efficient thing was to use a pre-trained network with the ability to perform this task efficiently, therefore we decided to use a Darknet, specifically YoloV3.
 
 <img src="https://i.stack.imgur.com/js9wN.png">
 
 Layers:
 
-- Input Layer: Esta layer tiene una entrada de (416,416,3), recibiendo los datos de una imagen de 416 px de alto y 416px de largo a color.
-- ConvolutionDownsampling: Esta capa tiene la funcion de realizar un pooling de la imagen y empezar a genera los filtros de la imagen.
-- Dense Connection: Esta capa es una red de neuronas normales conectadas, como cualquier capa densa en una red neuronal.
+- Input Layer: This layer has an input of (416,416,3), receiving the data from a 416 px high and 416 px long image in color.
+- ConvolutionDownsampling: This layer has the function of pooling the image and starting to generate the image filters.
+- Dense Connection: This layer is a network of connected normal neurons, like any dense layer in a neural network.
 - Spatial Pyramid Pooling: Given an 2D input Tensor, Temporal Pyramid Pooling divides the input in x stripes which extend through the height of the image and width of roughly (input_width / x). These stripes are then each pooled with max- or avg-pooling to calculate the output.
   - https://github.com/revidee/pytorch-pyramid-pooling
-- Object Detection: Esta capa tiene como finalidad terminar de determinar los objetos que estan siendo observados en la imagen.
+- Object Detection: The purpose of this layer is to finish determining the objects that are being observed in the image.
 
 ### Mini Demo:
 
 #### **Jupyter Notebook**:
 
-Si quieres probar la funcion del modelo, he realizado un Jupyter Notebook ya con el codigo listo para funcionar.
+If you want to test the function of the model, I have made a Jupyter Notebook with the code ready to go.
 
 Link: PENDING
 
