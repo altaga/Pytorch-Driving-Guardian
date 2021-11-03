@@ -15,6 +15,7 @@ Comprehensive monitor of driver alertness, emotional state and intelligent car b
 # Table of contents
 
 - [Pytorch Driving Guardian](#pytorch-driving-guardian)
+    - [Hi!, if you are a judge and want to review the models running in GoogleColab here are the notebooks.](#hi-if-you-are-a-judge-and-want-to-review-the-models-running-in-googlecolab-here-are-the-notebooks)
 - [Table of contents](#table-of-contents)
 - [Introduction:](#introduction)
 - [Problem:](#problem)
@@ -143,7 +144,7 @@ Curious fact: The use of Residual Blocks has the function of avoiding the loss o
 
 If you want to test the function of the model, I have made a Jupyter Notebook with the code ready to go.
 
-Link: PENDING
+[**Link**](https://github.com/altaga/Pytorch-Driving-Guardian/blob/main/Hardware%20Code/Jetson%20Code/Drowsiness/Drowsiness.ipynb)
 
 #### **Demo Drowsiness**:
 
@@ -188,7 +189,7 @@ Layers:
 
 If you want to test the function of the model, I have made a Jupyter Notebook with the code ready to go.
 
-Link: PENDING
+[**Link**](https://github.com/altaga/Pytorch-Driving-Guardian/blob/main/Hardware%20Code/Jetson%20Code/Emotion%20detection/Emotion.ipynb)
 
 #### **Demo**:
 
@@ -225,7 +226,7 @@ Layers:
 
 If you want to test the function of the model, I have made a Jupyter Notebook with the code ready to go.
 
-Link: PENDING
+[**Link**](https://github.com/altaga/Pytorch-Driving-Guardian/blob/main/Hardware%20Code/Jetson%20Code/YoloV3/YoloV3.ipynb)
 
 #### **Demo**:
 
