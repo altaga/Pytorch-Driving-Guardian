@@ -4,7 +4,7 @@ Comprehensive monitor of driver alertness, emotional state and intelligent car b
 
 <img src="./Images/logo.png" width="1000">
 
-Si eres un juez y quiere revisar los modelos funcionando en GoogleColab aqui estan los notebooks.
+### Hi!, if you are a judge and want to review the models running in GoogleColab here are the notebooks.
 
 [Drowsiness](https://github.com/altaga/Pytorch-Driving-Guardian/blob/main/Hardware%20Code/Jetson%20Code/Drowsiness/Drowsiness.ipynb)
 
