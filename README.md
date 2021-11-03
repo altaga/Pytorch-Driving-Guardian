@@ -4,6 +4,14 @@ Comprehensive monitor of driver alertness, emotional state and intelligent car b
 
 <img src="./Images/logo.png" width="1000">
 
+Si eres un juez y quiere revisar los modelos funcionando en GoogleColab aqui estan los notebooks.
+
+[Drowsiness](https://github.com/altaga/Pytorch-Driving-Guardian/blob/main/Hardware%20Code/Jetson%20Code/Drowsiness/Drowsiness.ipynb)
+
+[Emotions](https://github.com/altaga/Pytorch-Driving-Guardian/blob/main/Hardware%20Code/Jetson%20Code/Emotion%20detection/Emotion.ipynb)
+
+[YoloV3](https://github.com/altaga/Pytorch-Driving-Guardian/blob/main/Hardware%20Code/Jetson%20Code/YoloV3/YoloV3.ipynb)
+
 # Table of contents
 
 - [Pytorch Driving Guardian](#pytorch-driving-guardian)
@@ -34,7 +42,7 @@ Comprehensive monitor of driver alertness, emotional state and intelligent car b
       - [**Jupyter Notebook**:](#jupyter-notebook-2)
       - [**Demo**:](#demo-1)
 - [The Final Product:](#the-final-product)
-    - [DEMO:](#demo)
+    - [Epic DEMO:](#epic-demo)
 - [Commentary:](#commentary)
   - [References:](#references)
 
