@@ -96,6 +96,8 @@ We built a prototype which is capable of performing these 3 monitoring reliably 
 
 This PoC uses a Jetson Nano 4gb in 5W mode as the main computer to maintain low consumption for continuous use in a vehicle. The Jetson Nano is a mini computer very similar to the RaspberryPi, with the difference that it has a Dedicated GPU enabled with CUDA, in order to run the Pytorch AI models on the GPU.
 
+[Jetson Nano Pytorch Support](https://forums.developer.nvidia.com/t/pytorch-for-jetson-version-1-10-now-available/72048)
+
 <img src="./Images/Jetson.jpg">
 
 To visualize the results, an M5core2 was used, which is an IoT device with a screen capable of displaying the data through MQTT.
